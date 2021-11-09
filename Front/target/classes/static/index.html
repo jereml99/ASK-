@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function httpGet()
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", "connect/", false ); // false for synchronous request
+            xmlHttp.send( null );
+            document.getElementById("demo").innerHTML = xmlHttp.responseText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Front</h1>
+    <button type="button" onclick="httpGet()">Click</button>
+    <h2>Back</h2>
+    <div id="demo"></div>
+</body>
+</html>
